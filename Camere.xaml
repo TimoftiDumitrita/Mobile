@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.Camere"
+             Title="Camere">
+   
+      
+            
+                <StackLayout>
+                    <Label Text="Camera 105" FontSize="20" FontAttributes="Bold" />
+                    <Label Text="Camera este situata la etajul al II-lea si are o suprafata de 18 m^2. Ea este dotata cu baie proprie, televizor si cu un balcon cu o priveliste frumoasa catre munte." FontSize="16" />
+                    <Label Text="Camera 5" FontSize="20" FontAttributes="Bold" />
+                    <Label Text="Camera situata la parter, dispune de baie proeprie si televizor." FontSize="16" />
+                    <Label Text="Camera 10" FontSize="20" FontAttributes="Bold" />
+                    <Label Text="Camera este situata la parter. Este dotata cu baie proprie, televizor si wifi. Are iesire spre restaurantul nostru." FontSize="16" />
+                    <Label Text="Camera 201" FontSize="20" FontAttributes="Bold" />
+                    <Label Text="Camera este situata la etajul II si dispune de o proveliste de vis. Camera este dotata cu baie, televizor, baie." FontSize="16" />
+                    <Label Text="Camera 1" FontSize="20" FontAttributes="Bold" />
+                    <Label Text="Camera situata la parter, dispune de baie proeprie si televizor." FontSize="16" />
+
+                </StackLayout>
+          
+        
+</ContentPage>

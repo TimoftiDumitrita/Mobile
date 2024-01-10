@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.Reviews"
+             Title="Reviews">
+    <VerticalStackLayout>
+        <Slider x:Name="ratingSlider" Minimum="1" Maximum="5" Value="1" />
+
+        <Editor x:Name="messageEditor" Placeholder="Enter your review message" />
+
+        <Button Text="Submit Review" Clicked="OnSubmitReviewClicked" />
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mobile.MainPage">
+
+    <ScrollView>
+        <StackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="imagine_hotel.jpg"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                 Margin="0,0,0,20" />
+
+            <Label
+                Text="Bine ați venit la Hotel Belvedere"
+                FontSize="20"
+                FontAttributes="Bold"
+                TextColor="#0056b3"
+                HorizontalTextAlignment="Center" />
+
+            <Label
+                Text="Hotelul Belvedere de trei stele vă oferă confort de top și servicii impecabile, fiind situat într-o locație ideală pentru călătorii. Oaspeții noștri se pot bucura de camere elegante, cu unul, două sau trei paturi. Fiecare detaliu a fost gândit pentru confortul și plăcerea dumneavoastră."
+                FontSize="16"
+                LineBreakMode="WordWrap"
+                HorizontalTextAlignment="Center"
+                Margin="0,0,0,20" />
+
+            <Button
+                Text="Explorează camerele"
+                BackgroundColor="#0056b3"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="8"
+                Clicked="OnExploreCamereClicked"
+                HorizontalOptions="FillAndExpand"
+                Margin="0,0,0,20" />
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
