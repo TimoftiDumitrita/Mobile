@@ -5,14 +5,14 @@
              Title="AboutPage">
     <StackLayout>
         <VerticalStackLayout Spacing="10" Margin="10">
-            <HorizontalStackLayout Spacing="10">
-                <Image Source="imagine_hotel.jpg" SemanticProperties.Description="Rezervarile mele" HeightRequest="64" />
-                <Label FontSize="22" FontAttributes="Bold" Text="Rezervarile mele" VerticalOptions="End" />
-                <Label FontSize="22" Text="v1.0" VerticalOptions="End" />
-            </HorizontalStackLayout>
-            <Label Text="Aceasta aplicatie te va ajuta sa iti monitorizezi rezervarile facute la hotelul nostru!" />
-        </VerticalStackLayout>
-        <StackLayout BackgroundColor="#f5f5f5" Padding="20">
+        <HorizontalStackLayout Spacing="10">
+            <Image Source="imagine_hotel.jpg" SemanticProperties.Description="Rezervarile mele" HeightRequest="64" />
+            <Label FontSize="22" FontAttributes="Bold" Text="Rezervarile mele" VerticalOptions="End" />
+            <Label FontSize="22" Text="v1.0" VerticalOptions="End" />
+        </HorizontalStackLayout>
+        <Label Text="Aceasta aplicatie te va ajuta sa iti monitorizezi rezervarile facute la hotelul nostru!" />
+    </VerticalStackLayout>
+        <StackLayout BackgroundColor="#000000" Padding="20">
             <Label Text="Găsiți-ne" FontSize="Large" TextColor="#0056b3" FontAttributes="Bold" />
             <Label Text="HOTEL BELVEDERE BRAȘOV" />
             <Label Text="Bulevardul Muncii, nr. 21, Brașov" />

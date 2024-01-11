@@ -3,22 +3,38 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Mobile.Camere"
              Title="Camere">
-   
-      
-            
-                <StackLayout>
-                    <Label Text="Camera 105" FontSize="20" FontAttributes="Bold" />
-                    <Label Text="Camera este situata la etajul al II-lea si are o suprafata de 18 m^2. Ea este dotata cu baie proprie, televizor si cu un balcon cu o priveliste frumoasa catre munte." FontSize="16" />
-                    <Label Text="Camera 5" FontSize="20" FontAttributes="Bold" />
-                    <Label Text="Camera situata la parter, dispune de baie proeprie si televizor." FontSize="16" />
-                    <Label Text="Camera 10" FontSize="20" FontAttributes="Bold" />
-                    <Label Text="Camera este situata la parter. Este dotata cu baie proprie, televizor si wifi. Are iesire spre restaurantul nostru." FontSize="16" />
-                    <Label Text="Camera 201" FontSize="20" FontAttributes="Bold" />
-                    <Label Text="Camera este situata la etajul II si dispune de o proveliste de vis. Camera este dotata cu baie, televizor, baie." FontSize="16" />
-                    <Label Text="Camera 1" FontSize="20" FontAttributes="Bold" />
-                    <Label Text="Camera situata la parter, dispune de baie proeprie si televizor." FontSize="16" />
 
-                </StackLayout>
-          
-        
+
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="0,0,0,10" />
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+            <Image Source="camerahotel.jpg"  HeightRequest="185" Aspect="AspectFit" Margin="0,0,0,20"/>
+            <Label Text="Camera 105" FontSize="20" FontAttributes="Bold" />
+            <Label Text="Camera este situata la etajul al II-lea și are o suprafață de 18 m^2. Ea este dotată cu baie proprie, televizor și cu un balcon cu o priveliște frumoasă către munte." FontSize="16" />
+
+            <Image Source="camerahotel2.jpg"  HeightRequest="185" Aspect="AspectFit" Margin="0,0,0,20"/>
+            <Label Text="Camera 5" FontSize="20" FontAttributes="Bold" />
+            <Label Text="Camera situată la parter, dispune de baie proprie și televizor." FontSize="16" />
+
+            <Image Source="camerahotel4.jpg" HeightRequest="185" Aspect="AspectFit" Margin="0,0,0,20"/>
+            <Label Text="Camera 10" FontSize="20" FontAttributes="Bold" />
+            <Label Text="Camera este situată la parter. Este dotată cu baie proprie, televizor și wifi. Are ieșire spre restaurantul nostru." FontSize="16" />
+
+            <Image Source="camerahotel5.jpg"  HeightRequest="185" Aspect="AspectFit" Margin="0,0,0,20"/>
+            <Label Text="Camera 201" FontSize="20" FontAttributes="Bold" />
+            <Label Text="Camera este situată la etajul II și dispune de o priveliște de vis. Camera este dotată cu baie, televizor, baie." FontSize="16" />
+
+            <Image Source="camerahotel3.jpg" HeightRequest="185" Aspect="AspectFit" Margin="0,0,0,20"/>
+            <Label Text="Camera 1" FontSize="20" FontAttributes="Bold" />
+            <Label Text="Camera situată la parter, dispune de baie proprie și televizor." FontSize="16" />
+        </StackLayout>
+    </ScrollView>
+
+
 </ContentPage>

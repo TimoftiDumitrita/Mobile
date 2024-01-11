@@ -1,3 +1,5 @@
+using Mobile.Models;
+
 namespace Mobile;
 
 public partial class RezervarePage : ContentPage
@@ -7,13 +9,20 @@ public partial class RezervarePage : ContentPage
         InitializeComponent();
     }
     protected override async void OnAppearing()
+{
+    base.OnAppearing();
+    listView.ItemsSource = await App.Database.GetShopListsAsync();
+}
+    async void OnShopListAddedClicked(object sender, EventArgs e)
     {
-        base.OnAppearing();
-        listView.ItemsSource = await App.Database.GetShopListsAsync();
+        await Navigation.PushAsync(new RezervareListPage { BindingContext = new Rezervare() });
     }
-    async void OnShopListAddedClicked(object sender, EventArgs e) { await Navigation.PushAsync(new RezervareListPage { BindingContext = new RezervareListPage() }); }
+
     async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-        if (e.SelectedItem != null) { await Navigation.PushAsync(new RezervareListPage { BindingContext = e.SelectedItem as RezervareListPage }); }
+        if (e.SelectedItem != null)
+        {
+            await Navigation.PushAsync(new RezervareListPage { BindingContext = e.SelectedItem as Rezervare });
+        }
     }
 }

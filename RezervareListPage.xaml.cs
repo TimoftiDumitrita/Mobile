@@ -8,20 +8,20 @@ public partial class RezervareListPage : ContentPage
 	{
 		InitializeComponent();
 	}
+   
     async void OnSaveButtonClicked(object sender, EventArgs e)
     {
-        async void OnSaveButtonClicked(object sender, EventArgs e)
-        {
-            var slist = (Rezervare)BindingContext;
-            slist.Date = DateTime.UtcNow;
-            await App.Database.SaveShopListAsync(slist);
-            await Navigation.PopAsync();
-        }
-        async void OnDeleteButtonClicked(object sender, EventArgs e)
-        {
-            var slist = (Rezervare)BindingContext;
-            await App.Database.DeleteShopListAsync(slist);
-            await Navigation.PopAsync();
-        }
+        var rezervare = (Rezervare)BindingContext;
+        rezervare.Data_start = DateTime.UtcNow;
+        await App.Database.SaveShopListAsync(rezervare);
+       
+        await Navigation.PopAsync();
+    }
+
+    async void OnDeleteButtonClicked(object sender, EventArgs e)
+    {
+        var rezervare = (Rezervare)BindingContext;
+        await App.Database.DeleteShopListAsync(rezervare);
+        await Navigation.PopAsync();
     }
 }

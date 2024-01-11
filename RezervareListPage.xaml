@@ -4,14 +4,20 @@
              x:Class="Mobile.RezervareListPage"
              Title="RezervareListPage">
     <StackLayout Margin="20">
-        <Editor Placeholder="Enter the description of the shopping list" Text="{Binding Description}" HeightRequest="100" />
+        <Label Text="Data Start" />
+        <DatePicker Date="{Binding Data_start}" />
+
+        <Label Text="Data Final" />
+        <DatePicker Date="{Binding Data_end}" />
+
+        <!-- Alte câmpuri sau elemente pot fi adăugate aici -->
+
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Button Text="Save" Clicked="OnSaveButtonClicked" />
-            
         </Grid>
     </StackLayout>
 </ContentPage>
