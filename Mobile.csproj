@@ -70,7 +70,10 @@
 	  <MauiXaml Update="Camere.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Reviews.xaml">
+	  <MauiXaml Update="ReviewListPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="ReviewPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="RezervareListPage.xaml">

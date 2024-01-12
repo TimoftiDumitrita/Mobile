@@ -16,6 +16,18 @@ namespace Mobile
                 return database;
             }
         }
+        static ReviewDatabase reviewDatabase;
+        public static ReviewDatabase ReviewDatabase
+        {
+            get
+            {
+                if (reviewDatabase == null)
+                {
+                    reviewDatabase = new ReviewDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Review.db3"));
+                }
+                return reviewDatabase;
+            }
+        }
         public App()
         {
             InitializeComponent();

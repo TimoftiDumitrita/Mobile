@@ -9,8 +9,7 @@
 
     <TabBar>
         <ShellContent Title="Home" ContentTemplate="{DataTemplate local:MainPage}" />
-        
-        <ShellContent Title="Review" ContentTemplate="{DataTemplate local:Reviews}" />
+        <ShellContent Title="Review" ContentTemplate="{DataTemplate local:ReviewPage}" />
         <ShellContent Title="Rezervare" ContentTemplate="{DataTemplate local:RezervarePage}" />
         <ShellContent Title="About" ContentTemplate="{DataTemplate local:AboutPage}" />
     </TabBar>

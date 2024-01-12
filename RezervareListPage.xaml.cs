@@ -24,4 +24,11 @@ public partial class RezervareListPage : ContentPage
         await App.Database.DeleteShopListAsync(rezervare);
         await Navigation.PopAsync();
     }
-}
+    async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+        if (e.SelectedItem != null)
+        {
+            await Navigation.PushAsync(new RezervareListPage { BindingContext = e.SelectedItem as Rezervare });
+        }
+    }
+    }

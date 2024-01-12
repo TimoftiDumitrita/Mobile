@@ -10,8 +10,7 @@
         <Label Text="Data Final" />
         <DatePicker Date="{Binding Data_end}" />
 
-        <!-- Alte câmpuri sau elemente pot fi adăugate aici -->
-
+       
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -19,5 +18,13 @@
             </Grid.ColumnDefinitions>
             <Button Text="Save" Clicked="OnSaveButtonClicked" />
         </Grid>
+
+        <ListView x:Name="listView" ItemSelected="OnListViewItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Data_start}" Detail="{Binding Data_end}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 </ContentPage>

@@ -8,41 +8,43 @@ using System.Threading.Tasks;
 
 namespace Mobile.Data
 {
-    public class ReviewDatabase
-    {
-        readonly SQLiteAsyncConnection _database;
-
-        public ReviewDatabase(string dbPath)
+   
+    
+        public class ReviewDatabase
         {
-            _database = new SQLiteAsyncConnection(dbPath);
-            _database.CreateTableAsync<Review>().Wait();
-        }
+            readonly SQLiteAsyncConnection _database;
 
-        public Task<List<Review>> GetReviewsAsync()
-        {
-            return _database.Table<Review>().ToListAsync();
-        }
-
-        public Task<Review> GetReviewAsync(int id)
-        {
-            return _database.Table<Review>().Where(i => i.ID == id).FirstOrDefaultAsync();
-        }
-
-        public Task<int> SaveReviewAsync(Review review)
-        {
-            if (review.ID != 0)
+            public ReviewDatabase(string dbPath)
             {
-                return _database.UpdateAsync(review);
+                _database = new SQLiteAsyncConnection(dbPath);
+                _database.CreateTableAsync<Review>().Wait();
+            }
+
+            public Task<List<Review>> GetReviewsAsync() => _database.Table<Review>().ToListAsync();
+
+            public Task<Review> GetReviewAsync(int id) => _database.Table<Review>().Where(i => i.ID == id).FirstOrDefaultAsync();
+
+            public Task<int> SaveReviewAsync(Review review)
+            {
+            if (review != null)
+            {
+                if (review.ID != 0)
+                {
+                    return _database.UpdateAsync(review);
+                }
+                else
+                {
+                    return _database.InsertAsync(review);
+                }
             }
             else
             {
-                return _database.InsertAsync(review);
+              
+                return Task.FromResult(0);
             }
         }
 
-        public Task<int> DeleteReviewAsync(Review review)
-        {
-            return _database.DeleteAsync(review);
+            public Task<int> DeleteReviewAsync(Review review) => _database.DeleteAsync(review);
         }
     }
-}
+

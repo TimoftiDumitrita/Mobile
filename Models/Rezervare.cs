@@ -5,11 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using SQLite;
 
 namespace Mobile.Models
 {
     public class Rezervare: INotifyPropertyChanged
     {
+        [PrimaryKey, AutoIncrement]
         public int ID {  get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -42,7 +44,7 @@ namespace Mobile.Models
             }
         }
 
-        // Restul proprietăților și metodelor clasei Rezervare
+     
 
         protected virtual void OnPropertyChanged(string propertyName)
         {
