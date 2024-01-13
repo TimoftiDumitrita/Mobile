@@ -4,7 +4,7 @@ namespace Mobile
 {
     public partial class App : Application
     {
-        static RezervareDatabase database;
+        static RezervareDatabase? database;
         public static RezervareDatabase Database
         {
             get
@@ -16,7 +16,7 @@ namespace Mobile
                 return database;
             }
         }
-        static ReviewDatabase reviewDatabase;
+        static ReviewDatabase? reviewDatabase;
         public static ReviewDatabase ReviewDatabase
         {
             get
@@ -26,6 +26,20 @@ namespace Mobile
                     reviewDatabase = new ReviewDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Review.db3"));
                 }
                 return reviewDatabase;
+            }
+        }
+        static CameraDatabase? cameraDatabase;
+        public static CameraDatabase CameraDatabase
+        {
+            get
+            {
+                if (cameraDatabase == null)
+                {
+                    cameraDatabase = new
+                   CameraDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.
+                   LocalApplicationData), "Client.db3"));
+                }
+                return cameraDatabase;
             }
         }
         public App()
